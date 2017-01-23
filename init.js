@@ -3,11 +3,11 @@
 
 	
 		
-	var scrollTop = $('.scroll').offset();
-		scrollTop = scrollTop.top,
-		scroll= $(".scroll");
+	var scrollTop = $('.scroll').offset(),
+	    scrollTop = scrollTop.top,
+	    scroll= $(".scroll");
 	
-	console.log(scrollTop)	
+	console.log(scrollTop);	
 		
 	$(window).scroll(function(){
 		if($(this).scrollTop()>scrollTop){
