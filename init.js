@@ -1,19 +1,23 @@
-//  #navigation - это класс у которого будет длбавляться клас fixed 
-//когда будет пересикаться верхняя часть экрана над класом .scroll
 (function($) {
-  $(function() {
-    
-var scroll = $('.scroll').offset();
+	$(function() {
 
-console.log(scroll.top)
+	
+		
+	var scrollTop = $('.scroll').offset();
+		scrollTop = scrollTop.top,
+		scroll= $(".menu");
+	
+	console.log(scrollTop)	
+		
+	$(window).scroll(function(){
+		if($(this).scrollTop()>scrollTop){
+			scroll.animate({top: '0',},5);
+		}
+		else if ($(this).scrollTop()<scrollTop){
+			scroll.animate({top: '-60',},5);
+		}
+	});
 
-$(window).scroll(function(){
-	            if($(this).scrollTop()>scroll.top){
-	                $('#navigation').addClass('fixed');
-	            }
-	            else if ($(this).scrollTop()<scroll.top){
-	                $('#navigation').removeClass('fixed');
-	            }
-	        });
-  });
-})(jQuery);
+
+	});
+}(jQuery));
