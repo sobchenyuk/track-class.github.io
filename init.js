@@ -5,7 +5,7 @@
 		
 	var scrollTop = $('.scroll').offset();
 		scrollTop = scrollTop.top,
-		scroll= $(".menu");
+		scroll= $(".scroll");
 	
 	console.log(scrollTop)	
 		
